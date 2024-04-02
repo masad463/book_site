@@ -1,0 +1,54 @@
+.author-container {
+    text-align: center;
+
+}
+
+.book-item {
+    display: inline-block;
+    margin-right: 100px;
+    text-align: center;
+
+}
+
+.book-title {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    max-width: 200px;
+
+}
+
+.book-info {
+    text-align: center; /* Центрируем изображение и название */
+
+}
+
+.book {
+    display: block; /* Изображение занимает всю ширину блока */
+    margin: 0 auto; /* Центрируем изображение */
+}
+
+a {
+    display: block; /* Название книги на новой строке */
+
+}
+.book-list {
+    margin-left: 20px;
+    text-align: start;
+    list-style-type: none;
+}
+
+/* create_book.html */
+.form-label {
+    display: inline-block;
+    width: 68px; /* Фиксированная ширина для меток формы */
+    margin-right: 35px;
+}
+
+.form-input {
+    width: 270px; /* Ширина для полей ввода */
+}
+
+.form-error {
+    color: red;
+}

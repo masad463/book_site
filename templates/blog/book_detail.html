@@ -1,0 +1,59 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="book-details">
+    <h1>{{ book.title }}</h1>
+    <img src="{{ book.image.url }}" alt="Изображение книги">
+    <p class="genre">Жанр: {{ book.genre }}</p>
+    <p class="genre">Автор: <a class="name-author-details" href="{% url 'author_books' author_name %}">{{ author_name }}</a></p>
+    <p class="genre">Описание: {{ book.description }}</p>
+    <p class="genre">Дата выхода: {{ book.public_date }}</p>
+    <p>Текст книги: <a class="download-link" href="{{ book.text_file.url }}"
+                       download>Скачать (формат DOCX)</a></p>
+    {% if user.is_authenticated %}
+    <form method="post" action="{{ book.get_absolute_url }}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Добавить комментарий</button>
+    </form>
+    {% else %}
+    <p>Войдите в аккаунт, чтобы оставлять комментарии.</p>
+    {% endif %}
+    <div class="comments">
+        <h3>Комментарии</h3>
+        {% for comment in comments %}
+        <div class="card p-3" style="margin-top: 10px;">
+            <p class="comment-description">{{ comment }}</p>
+            {% if comment.author == request.user %}
+                <a href="{% url 'delete-comment' comment.id %}">Удалить</a>
+            {% endif %}
+   </div>
+        {% empty %}
+        <p class="no-comments">Комментариев пока нет.</p>
+        {% endfor %}
+<ul class="pagination">
+    {% if comments.has_other_pages %}
+        {% if comments.has_previous %}
+            <li>
+                <a href="?page={{ comments.previous_page_number }}" class="page-link">&lt;</a>
+            </li>
+        {% endif %}
+        {% for p in comments.paginator.page_range %}
+            {% if p >= comments.number|add:-2 and p <= comments.number|add:2 %}
+                <li class="page-item">
+                    <a href="?page={{ p }}" class="page-link">{{ p }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        {% if comments.has_next %}
+            <li>
+                <a href="?page={{ comments.next_page_number }}" class="page-link">&gt;</a>
+            </li>
+        {% endif %}
+    {% endif %}
+</ul>
+
+    </div>
+</div>
+
+{% endblock %}

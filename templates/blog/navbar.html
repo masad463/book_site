@@ -1,0 +1,28 @@
+{% load i18n %}
+
+<nav class="main-navbar">
+    <ul>
+        <li>
+            <a aria-current="page" href="{% url 'home' %}">FreeLibrary</a>
+        </li>
+        <li>
+            <a aria-current="page" href="{% url 'catalog' %}">Каталог</a>
+        </li>
+        <li>
+            <a aria-current="page" href="{% url 'recent_books' %}">Новинки</a>
+        </li>
+{% if user.is_authenticated %}
+    <li class="logged-in">
+        <a href="{% url 'profile' %}"> {{ user.username }}</a> | <a href="{% url 'logout' %}">Выйти</a>
+    </li>
+{% else %}
+    <li>
+        <a aria-current="page" href="{% url 'login' %}">Войти</a>
+    </li>
+    <li>
+        <a aria-current="page" href="{% url 'register' %}">Регистрация</a>
+    </li>
+{% endif %}
+
+    </ul>
+</nav>

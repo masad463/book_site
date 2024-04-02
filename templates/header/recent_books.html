@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1 class="new-books-header">Новое на сайте</h1>
+<div class="new-content">
+  {% for book in books %}
+  <div class="center-books">
+    <img src="{{ book.image.url }}" alt="Изображение книги">
+    <a href="{{ book.get_absolute_url }}"><span class="book-name">{{ book.title|truncatewords:2}}</span></a>
+  </div>
+  {% empty %}
+    <p class="empty">Нет доступных книг.</p>
+  {% endfor %}
+</div>
+{% endblock %}

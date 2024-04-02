@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<title>{{ author }}</title>
+<div class="author-container">
+    <h1 class="author-heading">{{ author }}</h1>
+
+    <ol class="book-list">
+        {% for book in book_list %}
+    <div class="book-item">
+        <div class="book-info">
+            <a href="{{ book.get_absolute_url }}">
+                <img src="{{ book.image.url }}" alt="Изображение книги" class="book">
+                <div class="book-title">{{ book.title }}</div>
+            </a>
+        </div>
+    </div>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
+
+

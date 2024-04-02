@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+   <h1 class="catalog-header">{{ category.name }}</h1>
+   <ul class="list">
+     {% for book in books %}
+       <li class="list-element">
+           <span class="icon">&#128196;</span>
+           <a href="{% url 'book_detail' book_slug=book.slug %}" class="href-a">{{ book.title }}</a>
+       </li>
+     {% endfor %}
+   </ul>
+{% endblock %}

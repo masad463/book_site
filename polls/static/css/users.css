@@ -1,0 +1,80 @@
+/* users.css */
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form {
+  width: 300px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2#log-in {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form#form-login {
+  display: flex;
+  flex-direction: column;
+}
+
+input, button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button#button-login {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button#button-login:hover {
+  background-color: #45a049;
+}
+
+p.register {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Вход через социальные сети */
+h4 {
+  text-align: center;
+}
+
+.logos-container {
+    display: flex; /* Устанавливаем flexbox */
+    justify-content: center;
+}
+
+a.logo {
+    margin: 10px; /* Добавляем отступы между изображениями */
+}
+
+a.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+a.logo img:hover {
+    transform: scale(1.1);
+}
+

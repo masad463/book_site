@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% for f in form %}
+    <div class="form-group">
+        <label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}:</label>
+        <input class="form-input" type="text" id="{{ f.id_for_label }}" name="{{ f.name }}" value="{{ f.value }}">
+        <div class="form-error">{{ f.errors }}</div>
+    </div>
+{% endfor %}
+{% block content %}
+<h2 class="become-author">Добавьте свою книгу</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for f in form %}
+        <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+        <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+        <input type="submit" value="Save" />
+
+    </form>
+{% endblock content %}
+
+

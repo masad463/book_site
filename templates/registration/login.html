@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/users.css' %}">
+<title>Login Page</title>
+
+<body>
+  <div class="login-form">
+    <h2 id="log-in">Вход в аккаунт</h2>
+    <form method="post" id="form-login">
+      {% csrf_token %}
+      <div class="form-error">{{ form.non_field_errors }}</div>
+      {% for f in form %}
+      <p><label class="form-label" style="" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+      <div class="form-error">{{ f.errors }}</div>
+      {% endfor %}
+      <button type="submit" id="button-login">Войти</button>
+      <p><a href="{% url 'password_reset' %}" style="margin-left: 65px; ">Забыли пароль?</a></p>
+    </form>
+    <p class="register">Нету аккаунта? <a href="{% url 'register' %}" class="register">Зарегистрироваться</a></p>
+    <h4>Вход через социальные сети:</h4>
+    <div class="logos-container">
+      <a href="{% url 'social:begin' 'vk-oauth2' %}" class="logo"><img src="/media/VK.png" alt="Изображение VK" class="logo"></a>
+      <a href="{% url 'social:begin' 'github' %}" class="logo"><img src="/media/git.png" alt="Изображение Git" class="logo"></a>
+    </div>
+
+  </div>
+</body>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+<h2>Вы уверены, что хотите удалить этот комментарий?</h2>
+<p>{{ comment.content }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Подтвердить удаление</button>
+</form>
