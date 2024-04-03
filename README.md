@@ -1,4 +1,4 @@
-<!-- TABLE OF CONTENTS -->
+<!-- Содержимое -->
 <details>
   <summary>Содержимое</summary>
   <ol>
@@ -11,18 +11,13 @@
     <li>
       <a href="#getting-started">Начало</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Установка</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#usage">Что из себя представляет проект</a></li>
   </ol>
 </details>
+
 
 
 
@@ -46,6 +41,9 @@
   </a>
 * <a href="https://pypi.org/project/django-recaptcha/">
     <img src="https://avatars.githubusercontent.com/u/151521335?s=280&v=4" alt="Django captcha" height="65">
+  </a>
+* <a href="https://www.postgresql.org/">
+    <img src="https://www.arsis.ru/wp-content/uploads/2023/04/postgres-logo-1-1.png" alt="PostgreSQL" height="88" width="145">
   </a>
 
 
@@ -99,8 +97,6 @@
    * Указать свою фамилию и имя
  
 9. Страница с книгами автора
-
-
 
 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
