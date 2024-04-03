@@ -1,15 +1,15 @@
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Содержимое</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">О проекте</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Используемые технологии</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Начало</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -40,3 +40,16 @@
 * <a href="https://www.djangoproject.com/">
     <img src="https://habrastorage.org/r/w1560/getpro/habr/post_images/1d5/28e/2cb/1d528e2cb5fbc29ad16c74e5d883c371.png" alt="Django" height="35">
   </a>
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* <a href="https://python-social-auth.readthedocs.io/en/latest/index.html">
+    <img src="https://static.codingforentrepreneurs.com/media/series/python-social-auth/10b61e68-7721-43d2-bf76-cdac30fc38df.png" alt="Python Social Auth" height="35">
+  </a>
+* <a href="https://pypi.org/project/django-recaptcha/">
+    <img src="https://avatars.githubusercontent.com/u/151521335?s=280&v=4" alt="Django captcha" height="65">
+  </a>
+
+
+
+
+<!-- Начало -->
+## Начало
